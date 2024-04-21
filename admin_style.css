@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,700;1,800&display=swap');
+:root{
+
+  --main-color:#8e44ad;
+  --black:#222;
+  --white:#fff9;
+  --light-black:#777;
+  --light-white:#fff9;
+  --dark-bg:rgba(0,0,0,.7);
+  --light-bg:#eee;
+  --border:1rem solid var(--black);
+  --box-shadow:0.5rem 1rem rgba(0,0,0,.1);
+  --text-shadow:0.5rem 1rem rgba(0,0,0,.3);
+  --orange:#ff6600 ;
+  --yellow: #ffe91a;
+  --red: #de0000;
+  --purple: #674ea7;
+  
+
+
+
+
+  
+
+
+
+
+
+
+}
+
+*{
+
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border : none;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+
+html{
+
+    font-size: 62.2%;
+    overflow-x: hidden;
+
+}
+body{
+    background-color: var(--light-bg);
+}
+section{
+
+    padding: 3rem 2rem;
+
+}
+.bsn{
+    height: 100px;
+    width: 100px;
+    background: coral;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+   }
+   .icone{
+       width: 50px;
+   
+   
+   }
+
+
+
+
+.message{
+    position: sticky;
+    top:0;
+    margin:0 auto;
+    max-width: 1200px;
+    background-color: var(--light-black);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap:1.5rem;
+}
+.message span{
+    font-size: 2rem;
+    color:var(--black);
+
+}
+.message i{
+    cursor: pointer;
+    color: var(--red);
+    font-size: 2.5rem;
+
+}
+.message i:hover{
+    transform: rotate(90deg);
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:1rem 3rem;
+    cursor: pointer;
+    color:var(--white);
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+
+}
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+    background-color: var(--black);
+
+
+}
+
+
+.white-btn,
+.btn{
+    background-color: var(--main-color);
+}
+
+
+
+
+.option-btn{
+    background-color: var(--orange);
+
+}
+.delete-btn{
+    background-color:var(--red) ;
+}
+
+.header{
+
+     position: sticky;
+     top:0; left:0; right:0;
+     z-index: 1000;
+     background-color: var(--white);
+     box-shadow: var(--box-shadow);
+
+}
+.header .flex{
+      
+    display : flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.header .flex .logo{
+   
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.header .flex .logo span{
+     color: var(--purple);
+
+
+
+}
+.header .flex .navbar a{
+
+    margin: 0 1rem;
+    font-size: 2rem;
+    color:var(--black);
+}
+.header .flex .navbar a:hover{
+   color:var(--purple);
+}
+
+.header .flex .icons div{
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+
+
+}
+.header .flex .icons div:hover{
+    color:var(--purple);
+}
+
+/*
+#menu-btn{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white); 
+        border-top: var(--border); 
+        border-bottom: var(--border); 
+    }
+    .header .flex .navbar a{
+        margin: 2rem;
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+*/
+/* Reset some default styles */
+body, h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and some spacing to the body */
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Style for the dashboard section */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style for the heading */
+.heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style for the container box */
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Style for each individual box */
+.box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+/* Style for the number in each box with purple color */
+.box h3 {
+    color: purple;
+    font-size: 36px;
+}
+
+/* Style for the description in each box */
+.box p {
+    color: #555;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .box {
+        flex: 100%;
+        margin: 10px 0;
+    }
+}
+.add-products {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #555;
+}
+
+.box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color:var(--purple);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:var(--purple);
+}
+/* Style général de la section */
+.show-products {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style des boîtes conteneurs */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style des boîtes individuelles */
+.box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style de l'image dans la boîte */
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Style du nom du produit */
+.box .name {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Style du prix du produit */
+.box .price {
+    color: var(--purple); /* Couleur bleue pour le prix par exemple */
+}
+
+/* Style des boutons d'option */
+.option-btn, .delete-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color:var(--purple);
+    border: 1px solid #8e44ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style du bouton de suppression avec une couleur différente */
+.delete-btn {
+    background-color: var(--purple); /* Couleur rouge pour le bouton de suppression par exemple */
+    border: 1px solid #674ea7;
+}
+
+/* Style du message "no products added yet" */
+.empty {
+    text-align: center;
+    margin-top: 2rem;
+    color:var(--white);
+    border: var(--border);
+    color:var(--black);
+    font-size: 4rem;
+}
+.show-products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .show-products{
+    padding-top: 0;
+ }
+ 
+ .show-products .box-container .box{
+    text-align: center;
+    padding:2rem;
+    border-radius: .5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+ }
+ 
+ .show-products .box-container .box img{
+    height: 20rem;
+ }
+ 
+ .show-products .box-container .box .name{
+    padding:1rem 0;
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+ .show-products .box-container .box .price{
+    padding:1rem 0;
+    font-size: 2.5rem;
+    color:var(--red);
+ }
+
+ .edit-product-form{
+    min-height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    overflow-y: scroll;
+    position: fixed;
+    top:0; left:0; 
+    z-index: 1200;
+    width: 100%;
+ }
+ 
+ .edit-product-form form{
+    width: 50rem;
+    padding:2rem;
+    text-align: center;
+    border-radius: .3rem;
+    background-color: var(--white);
+ }
+ 
+ .edit-product-form form img{
+    height: 20rem;
+    margin-bottom: 1rem;
+ }
+ 
+ .edit-product-form form .box{
+    margin:1rem 0;
+    padding:1rem 1rem;
+    border:var(--border);
+    border-radius: .4rem;
+    background-color: var(--light-bg);
+    font-size: 1.8rem;
+    color:var(--black);
+    width: 100%;
+ }
+
+ .users .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .users .box-container .box{
+    background-color: var(--white);
+    padding:2rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+ }
+ 
+ .users .box-container .box p{
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .users .box-container .box p span{
+    color:var(--purple);
+ }
+ 
+ .users .box-container .box .delete-btn{
+    margin-top: 0;
+ }
+ 
+ .messages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .messages .box-container .box{
+    background-color: var(--white);
+    padding:2rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .6rem;
+ }
+ 
+ .messages .box-container .box p{
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    color:var(--light-color);
+    line-height: 1.5;
+ }
+ 
+ .messages .box-container .box p span{
+    color:var(--purple);
+ }
+ 
+ .messages .box-container .box .delete-btn{
+    margin-top: 0;
+ }
